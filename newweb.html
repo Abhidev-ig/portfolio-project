@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhidev - Professional Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 10px 0 20px;
+    }
+
+    header .cta-button {
+      background: #ff6f61;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    header .cta-button:hover {
+      background: #ff4a3d;
+    }
+
+    /* About Section */
+    #about {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      background: white;
+    }
+
+    #about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-right: 30px;
+    }
+
+    #about .bio {
+      max-width: 600px;
+    }
+
+    /* Projects Section */
+    #projects {
+      padding: 50px 20px;
+      background: #f4f4f4;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-card .project-info {
+      padding: 20px;
+    }
+
+    .project-card h3 {
+      margin: 0 0 10px;
+    }
+
+    .project-card p {
+      margin: 0 0 15px;
+    }
+
+    .project-card .project-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .project-card .project-links a {
+      background: #2575fc;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+    }
+
+    .project-card .project-links a:hover {
+      background: #1a5bbf;
+    }
+
+    /* Skills Section */
+    #skills {
+      padding: 50px 20px;
+      background: white;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+
+    .skill {
+      text-align: center;
+    }
+
+    .skill i {
+      font-size: 2rem;
+      color: #2575fc;
+    }
+
+    .skill h3 {
+      margin: 10px 0;
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 50px 20px;
+      background: #f4f4f4;
+    }
+
+    #contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #contact-form button {
+      background: #2575fc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #contact-form button:hover {
+      background: #1a5bbf;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer .social-links {
+      margin: 10px 0;
+    }
+
+    footer .social-links a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    footer .social-links a:hover {
+      color: #2575fc;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Abhidev</h1>
+    <p>Web Developer | Designer | Problem Solver</p>
+    <a href="#projects" class="cta-button">View My Work</a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <img src="" alt="Abhidev">
+    <div class="bio">
+      <h2>About Me</h2>
+      <p>Hi, I'm Abhidev, a passionate web developer with expertise in HTML, CSS, JavaScript, and React. I love building beautiful, functional websites that solve real-world problems.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="project1.jpg" alt="Project 1">
+        <div class="project-info">
+          <h3>Professional Portfolio</h3>
+          <p>A showcase of my web development project, skills, and experience.</p>
+          <div class="project-links">
+            <a href="#" target="_blank">Live Demo</a>
+            <a href="#" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="project2.jpg" alt="Project 2">
+        <div class="project-info">
+          <h3>Coming Soon</h3>
+          <p>A new project is in development. Stay tuned!</p>
+          <div class="project-links">
+            <a href="#" target="_blank">Coming Soon</a>
+            <a href="#" target="_blank">Coming Soon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">
+        <i class="fab fa-html5"></i>
+        <h3>HTML5</h3>
+      </div>
+      <div class="skill">
+        <i class="fab fa-css3-alt"></i>
+        <h3>CSS3</h3>
+      </div>
+      <div class="skill">
+        <i class="fab fa-js"></i>
+        <h3>JavaScript</h3>
+      </div>
+      <div class="skill">
+        <i class="fab fa-react"></i>
+        <h3>React</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/abhidev-s-a57742345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Abhidev-ig" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/_abhiyeeee._?igsh=N3psZ2hudHNhd3l" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 Abhidev. All rights reserved.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function() {
+      emailjs.init("b0gkYlN8CMTVSyDMn"); // Replace with your Public Key
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("abhi431099@gmail.com", "template_tdw6858", this)
+          .then(() => {
+              alert("Message sent successfully!");
+              document.getElementById("contact-form").reset();
+          })
+          .catch((error) => {
+              alert("Failed to send message: " + JSON.stringify(error));
+          });
+  });
+</script>
+</body>
+</html>
